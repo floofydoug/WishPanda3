@@ -1,15 +1,27 @@
-<%= link_to "Wishpanda3", root_path, :class => 'brand' %>
-<ul class="nav">
-  <% if user_signed_in? %>
-    <li>
-    Logged in as <%= current_user.name %>
-    </li>
-    <li>
-    <%= link_to 'Logout', signout_path %>
-    </li>
-  <% else %>
-    <li>
-    <%= link_to 'Login', signin_path %>
-    </li>
-  <% end %>
-</ul>
+    <div class="header pure-u-1">
+        <div class="pure-menu pure-menu-open pure-menu-horizontal">
+            <a class="pure-menu-heading" href="">WishPanda</a>
+
+            <ul>
+                <li class="pure-menu-selected"><a href="#">Home</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">API</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <ul class="nav">
+              <% if user_signed_in? %>
+                <li>
+                Logged in as <%= current_user.name %>
+                </li>
+                <li>
+                <%= link_to 'Logout', signout_path %>
+                </li>
+              <% else %>
+                <li>
+                <%= link_to 'Login', signin_path %>
+                </li>
+              <% end %>
+          </ul>
+        </div>
+    </div>
