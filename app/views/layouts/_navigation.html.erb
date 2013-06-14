@@ -3,13 +3,13 @@
             <a class="pure-menu-heading" href="">WishPanda</a>
 
             <ul>
-                <li class="pure-menu-selected"><a href="#">Home</a></li>
-                <li><a href="#">Tour</a></li>
-                <li><a href="#">API</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About</a></li>
+                <li><%= link_to "Home", root_path %></li>
+                <li><%= link_to "Contests", contests_path %></li>
+                <li><%= link_to "Create a Contest", new_contest_path%></li>
+                <li><a href="#">Winners</a></li>
+                <li><a href="#">Stats</a></li>
             </ul>
-            <ul class="nav">
+            <ul style="float:right;">  
               <% if user_signed_in? %>
                 <li>
                 Logged in as <%= current_user.name %>
